@@ -6,8 +6,8 @@ require 'active_reloader/version'
 Gem::Specification.new do |spec|
   spec.name          = "active_reloader"
   spec.version       = ActiveReloader::VERSION
-  spec.authors       = ["imranjs"]
-  spec.email         = ["imran@jumpshare.com"]
+  spec.authors       = ["Imran Latif"]
+  spec.email         = ["ilatif.bwp@gmail.com"]
   spec.summary       = %q{TODO: Write a short summary. Required.}
   spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
