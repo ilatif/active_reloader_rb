@@ -4,3 +4,10 @@ require "active_reloader/server"
 module ActiveReloader
   # Your code goes here...
 end
+
+# Code to run active_reloader server
+Thread.new do 
+	server_script_path = File.expand_path("../../config.ru", __FILE__)
+	puts "\n\n\n\n\n\n =========#{server_script_path}\n\n\n\n"
+	`rackup '#{server_script_path}'`
+end

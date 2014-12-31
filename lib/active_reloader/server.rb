@@ -12,7 +12,6 @@ module ActiveReloader
 					run Proc.new { [200, {"Content-Type" => "text/javascript"}, [js_code]] }
 				end
 			end
-			builder
 		end
 	end
 end
