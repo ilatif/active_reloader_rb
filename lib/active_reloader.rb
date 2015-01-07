@@ -6,8 +6,10 @@ module ActiveReloader
 end
 
 # Code to run active_reloader server
-Thread.new do 
-	server_script_path = File.expand_path("../../config.ru", __FILE__)
-	puts "\n\n\n\n\n\n =========#{server_script_path}\n\n\n\n"
-	`rackup '#{server_script_path}'`
+if (defined?(Rails::Server))
+	Thread.new do 
+		server_script_path = File.expand_path("../../config.ru", __FILE__)
+		puts "\n\n\n\n\n\n =========#{server_script_path}\n\n\n\n"
+		`rackup '#{server_script_path}'`
+	end
 end
