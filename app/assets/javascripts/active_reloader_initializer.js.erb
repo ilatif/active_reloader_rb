@@ -1,0 +1,15 @@
+var __ActiveReloaderInitializer = {
+	active_reloader_server_url: "<%= ActiveReloader::Server.url %>",
+	initialize: function() {
+		$("body").append("<iframe id='active_reloader_iframe' src='" + __ActiveReloaderInitializer.active_reloader_server_url + "' width='' height='0' style='display: none;' />");
+	},
+	config: function() {
+		return {
+			rails_root: "<%= Rails.application.root %>"
+		}
+	}
+}
+
+$(function() {
+	__ActiveReloaderInitializer.initialize();
+});
