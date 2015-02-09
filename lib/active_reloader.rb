@@ -1,5 +1,6 @@
 require "active_reloader/version"
 require "active_reloader/server"
+require "active_reloader/railtie"
 require "active_reloader/engine"
 
 module ActiveReloader

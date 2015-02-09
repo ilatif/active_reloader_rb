@@ -1,13 +1,11 @@
 // This file contains code that will look for changes in Rails project and provide information to related object in parent iframe
 window.addEventListener('message', function(event) {
-	if (event.origin == "http://localhost:3000") {
-		var active_reloader_config = event.data.active_reloader_config;
-		console.log(active_reloader_config);
-		__ActiveReloader.start({rails_root: active_reloader_config.rails_root});
-	}
+	var active_reloader_config = event.data.active_reloader_config;
+	console.log(active_reloader_config);
+	__ActiveReloader.start({rails_root: active_reloader_config.rails_root});
 });
 
-window.parent.postMessage({provide_config: 1}, "http://localhost:3000");
+window.parent.postMessage({provide_config: 1}, "*");
 
 var __ActiveReloader = {
 	last_reload_time: 0,
