@@ -18,7 +18,7 @@ var __ActiveReloaderInitializer = {
 	config: function() {
 		return {
 			rails_root: "<%= Rails.application.root %>",
-			paths: "<%= ActiveReloader::Configuration.paths %>"
+			paths: "<%= ActiveReloader::Configuration.paths.join(',') %>"
 		}
 	}
 }

@@ -15,10 +15,14 @@ module ActiveReloader
 
 		def _notify
 			response = {"status" => 0}
+			watched_directories = []
 
 			rails_root = @request.params["rails_root"]
 			paths      = @request.params["paths"]
-			application_folder = "#{rails_root}/#{paths}"
+
+			paths.split(",").each do |path|
+				watched_directories << "#{rails_root}/#{path}"
+			end
 
 			file_paths = []
 			change_found = false
@@ -27,7 +31,7 @@ module ActiveReloader
 			start_time = Time.now.to_i
 			end_time   = start_time + 25
 
-			Find.find(application_folder) do |path|
+			Find.find(*watched_directories) do |path|
 				if (FileTest.file?(path) && File.basename(path)[0] != ".")
 					# File.mtime gives us time in local time zone. We will convert it to UTC using to_i method on Time
 					file_mtime = Time.parse(File.mtime(path).to_s).to_i
