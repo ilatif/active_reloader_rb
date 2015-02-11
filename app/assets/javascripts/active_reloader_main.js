@@ -2,7 +2,7 @@
 window.addEventListener('message', function(event) {
 	var active_reloader_config = event.data.active_reloader_config;
 	console.log(active_reloader_config);
-	__ActiveReloader.start({rails_root: active_reloader_config.rails_root});
+	__ActiveReloader.start({rails_root: active_reloader_config.rails_root, paths: active_reloader_config.paths});
 });
 
 window.parent.postMessage({provide_config: 1}, "*");

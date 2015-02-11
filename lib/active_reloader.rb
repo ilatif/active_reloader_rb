@@ -2,6 +2,7 @@ require "active_reloader/version"
 require "active_reloader/server"
 require "active_reloader/railtie"
 require "active_reloader/engine"
+require "active_reloader/configuration"
 
 module ActiveReloader
   # Your code goes here...

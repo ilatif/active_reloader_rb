@@ -17,9 +17,10 @@ module ActiveReloader
 			response = {"status" => 0}
 
 			rails_root = @request.params["rails_root"]
-			application_folder = "#{rails_root}/app"
+			paths      = @request.params["paths"]
+			application_folder = "#{rails_root}/#{paths}"
 
-			paths = []
+			file_paths = []
 			change_found = false
 
 			# Time.now.to_i gives us time in UTC
@@ -34,12 +35,12 @@ module ActiveReloader
 						change_found = true
 						break
 					end
-					paths << path
+					file_paths << path
 				end
 			end
 
 			while(Time.now.to_i < end_time && change_found == false) 
-				paths.each do |path|
+				file_paths.each do |path|
 					file_mtime = Time.parse(File.mtime(path).to_s).to_i
 					if (file_mtime > start_time)
 						change_found = true
