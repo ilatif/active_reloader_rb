@@ -1,6 +1,6 @@
 # ActiveReloader
 
-A Rails gem that reloads browser as soon as you do some changes in your Rails app. We as web developers are sometimes bounded in `Change -> Switch to Browser -> Refresh -> Change` cycle. This really hurts productivity. This gem will help you in breaking this cumbersome routine and your browser will be refreshed automatically whenever it detects any change in Rails code thus freeing you from that manually updating browser and hence resulting in increased productivity. 
+This is a Rails gem that reloads browser as soon as you do some changes in your Rails app. We as web developers are sometimes bounded in `Change -> Switch to Browser -> Refresh -> Change` cycle. This really hurts productivity. This gem will help you in breaking this cumbersome routine and your browser will be refreshed automatically whenever it detects any change in Rails code thus freeing you from that manually updating browser and hence resulting in increased productivity. 
 
 ## Installation
 
@@ -40,7 +40,7 @@ If you want to completely replace and provide new directories you can use:
 	
 Always provide directories relative to your Rails app. For example if you want to look for changes in `config/initializers` directory you can use following code:
 
-	config.paths << "config/initializer"
+	config.paths << "config/initializers"
 
 ## How It Works
 
@@ -62,7 +62,7 @@ To increase performance of `ActiveReloader`'s server instead of doing `Ajax` req
 
 ## Beware
 
-`ActiveReloader` is intented to be used only in `development` environement. It is not developed to be the next **hot code reloader / swapper**. Necessary checks have been placed to make sure `ActiveReloader` only works in `development` environment when Rails server is running.
+`ActiveReloader` is intended to be used only in `development` environment. It is not developed to be the next **hot code reloader / swapper**. Necessary checks have been placed to make sure `ActiveReloader` only works in `development` environment when Rails server is running.
 
 ## Special Thanks
 
