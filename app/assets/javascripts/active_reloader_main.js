@@ -1,7 +1,6 @@
 // This file contains code that will look for changes in Rails project and provide information to related object in parent iframe
 window.addEventListener('message', function(event) {
 	var active_reloader_config = event.data.active_reloader_config;
-	console.log(active_reloader_config);
 	__ActiveReloader.start({rails_root: active_reloader_config.rails_root, paths: active_reloader_config.paths});
 });
 
