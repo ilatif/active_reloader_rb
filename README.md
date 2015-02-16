@@ -1,6 +1,6 @@
 # ActiveReloader
 
-Rails gem that reloads browser as soon as you do some changes in your Rails app. We as web developers are sometimes bounded in `Change -> Switch to Browser -> Refresh -> Change` cycle. This really hurts productivity. This gem will help you in breaking this cumbersome routine and your browser will be refreshed automatically whenever it detects any change in Rails code thus freeing you from that manually updating browser and hence resulting in increased productivity. 
+A Rails gem that reloads browser as soon as you do some changes in your Rails app. We as web developers are sometimes bounded in `Change -> Switch to Browser -> Refresh -> Change` cycle. This really hurts productivity. This gem will help you in breaking this cumbersome routine and your browser will be refreshed automatically whenever it detects any change in Rails code thus freeing you from that manually updating browser and hence resulting in increased productivity. 
 
 ## Installation
 
